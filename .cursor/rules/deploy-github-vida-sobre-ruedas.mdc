@@ -1,0 +1,26 @@
+---
+description: Deploy this project from Cursor to the GitHub origin repository
+alwaysApply: true
+---
+
+# Deploy to GitHub (Vida Sobre Ruedas)
+
+Use this workflow whenever the user asks to deploy or push this project.
+
+- Repository URL must be `https://github.com/Janick18/Vida-Sobre-Ruedas.git`.
+- Confirm current directory is project root and run `git status` first.
+- If `origin` is missing, add it with `git remote add origin <repo-url>`.
+- Ensure branch is `main` using `git branch -M main`.
+- Stage and commit only when user requested a commit.
+- Push with `git push -u origin main`.
+- If push fails due to auth, do not ask for tokens in chat. Instruct user to authenticate locally with Git credential helper or SSH.
+- Never print, store, or echo Personal Access Tokens.
+
+Quick command sequence:
+
+```bash
+git status
+git remote -v
+git branch -M main
+git push -u origin main
+```
